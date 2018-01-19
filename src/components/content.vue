@@ -9,10 +9,12 @@
     </div>
     <div class="projects">
        <div class="projectItem" v-for = "item in projectsData" :key="item.name">
-          <img class="projectItem-img" src="static/1.jpg" alt="tupian">
+          <div class="projectItem-img"><img src="static/3.jpg" alt="tupian"></div>
           <div class="projectItem-name"> {{ item.name }} </div>
-          <div class="projectItem-description"> {{ item.description }} </div>
-          <a class="projectItem-gotodetail" href="">查看项目详情</a>
+          <div class="projectItem-description">
+            {{ item.description }}
+            <a class="projectItem-gotodetail" href="">详情...</a>
+          </div>
           <div class="projectItem-url">
             <a :href="item.demoUrl" target="_blank">在线演示</a>
             <a :href="item.githubUrl" target="_blank">Github</a>
@@ -80,8 +82,7 @@ export default {
   top: -50px;
   left:0;
   right:0;
-  margin:0 20px;
-  background-color:#5adab1;
+  background-color:#42b9ae;
   text-align: center;
 }
 .categories .categoryItem {
@@ -94,7 +95,7 @@ export default {
   transition: font-size .1s ease-in;
 }
 .categories .categoryItem.active{
-  color:red;
+  color:#ffffff;
 }
 .categories .categoryItem:hover{
   font-size:20px;
@@ -104,6 +105,7 @@ export default {
   display: block;
   line-height: 80px;
 }
+
  /* 项目列表 */
 .projects{
   position: relative;
@@ -113,21 +115,65 @@ export default {
   text-align: center;
 }
 .projectItem{
+  position: relative;
   width:280px;
   height:330px;
   overflow: hidden;
   display: inline-block;
   margin:10px;
-  background-color:#ffff00;
+  background-color:#ffffff;
+  border: 1px solid silver;
+  border-radius: 6px;
+  box-shadow: 5px 5px silver;
+}
+.projectItem:hover .projectItem-img img{
+  transform: scale(1.2);
 }
 .projectItem .projectItem-img{
   width:100%;
   height:96px;
+  overflow: hidden;
 }
-.projectItem .projectItem-name{}
-.projectItem .projectItem-description{}
-.projectItem .projectItem-name{}
-.projectItem .projectItem-gotodetail{}
-.projectItem .projectItem-url{}
-
+.projectItem .projectItem-img img{
+  width:100%;
+  height:96px;
+}
+.projectItem .projectItem-img img{
+  transition: all .3s linear;
+}
+.projectItem .projectItem-name{
+  text-align:left;
+  font-size:16px;
+  padding:20px 10px;
+}
+.projectItem .projectItem-description{
+  text-align: left;
+  font-size: 14px;
+  padding: 10px;
+  padding-top:0;
+  font-weight: 100;
+}
+.projectItem .projectItem-description a{
+  text-decoration: none;
+  color:#3b38ff;
+}
+.projectItem .projectItem-url{
+  position: absolute;
+  bottom:24px;
+  left:20px;
+  right:20px;
+}
+.projectItem .projectItem-url a{
+  text-decoration: none;
+  font-size:14px;
+  font-weight: 200;
+  color:#3b38ff;
+  line-height: 24px;
+}
+.projectItem .projectItem-url a:first-child{
+  float: left;
+}
+.projectItem .projectItem-url a:last-child{
+  float: right;
+}
 </style>
