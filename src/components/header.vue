@@ -24,7 +24,7 @@ export default {
 .header{
   width:100%;
   height:280px;
-  background-color: #8ec1ca;
+  background-color: #5699de;
 }
 .header .titleDiv{
   position: absolute;

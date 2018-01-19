@@ -9,7 +9,7 @@
     </div>
     <div class="projects">
        <div class="projectItem" v-for = "item in projectsData" :key="item.name">
-          <div class="projectItem-img"><img src="static/3.jpg" alt="tupian"></div>
+          <div class="projectItem-img"><img src="static/1.jpg" alt="tupian"></div>
           <div class="projectItem-name"> {{ item.name }} </div>
           <div class="projectItem-description">
             {{ item.description }}
@@ -82,7 +82,7 @@ export default {
   top: -50px;
   left:0;
   right:0;
-  background-color:#42b9ae;
+  background-color:#7cb4ec;
   text-align: center;
 }
 .categories .categoryItem {
