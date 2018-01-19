@@ -2,7 +2,9 @@
   <div class="content">
     <div class="categories">
        <a :class="[{active: index === currentCategory}, 'categoryItem']" v-for = "(item, index) in categoriesData" :key="index" @click="onCategoryClick(index)">
+         <!-- <i class="el-icon-edit"></i> -->
          <span> {{ item.name }} </span>
+         <!-- <div class="activeline"></div> -->
        </a>
     </div>
     <div class="projects">
@@ -71,23 +73,38 @@ export default {
   left:0;
   right:0;
 }
+
+/* 分类列表 */
 .categories{
   position: relative;
   top: -50px;
   left:0;
   right:0;
-  height:100px;
   margin:0 20px;
-  padding: 28px 24px 0;
   background-color:#5adab1;
   text-align: center;
 }
 .categories .categoryItem {
   cursor:pointer;
+  display: inline-block;
+  width:100px;
+  height:80px;
+  margin: 0 16px;
+  text-align: center;
+  transition: font-size .1s ease-in;
 }
 .categories .categoryItem.active{
   color:red;
 }
+.categories .categoryItem:hover{
+  font-size:20px;
+}
+.categories .categoryItem span
+{
+  display: block;
+  line-height: 80px;
+}
+ /* 项目列表 */
 .projects{
   position: relative;
   left:0;
