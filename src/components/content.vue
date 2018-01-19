@@ -9,10 +9,10 @@
     </div>
     <div class="projects">
        <div class="projectItem" v-for = "item in projectsData" :key="item.name">
-          <img src="" alt="tupian">
+          <img class="projectItem-img" src="static/1.jpg" alt="tupian">
           <div class="projectItem-name"> {{ item.name }} </div>
           <div class="projectItem-description"> {{ item.description }} </div>
-          <a class="projectItem-detail" href="">查看项目详情</a>
+          <a class="projectItem-gotodetail" href="">查看项目详情</a>
           <div class="projectItem-url">
             <a :href="item.demoUrl" target="_blank">在线演示</a>
             <a :href="item.githubUrl" target="_blank">Github</a>
@@ -117,9 +117,17 @@ export default {
   height:330px;
   overflow: hidden;
   display: inline-block;
-  /* margin-right: 10px;
-  margin-bottom: 10px; */
   margin:10px;
   background-color:#ffff00;
 }
+.projectItem .projectItem-img{
+  width:100%;
+  height:96px;
+}
+.projectItem .projectItem-name{}
+.projectItem .projectItem-description{}
+.projectItem .projectItem-name{}
+.projectItem .projectItem-gotodetail{}
+.projectItem .projectItem-url{}
+
 </style>
