@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="categories">
-       <a :class="{active: index === currentCategory}" v-for = "(item, index) in categoriesData" :key="index" @click="onCategoryClick(index)">
+       <a :class="[{active: index === currentCategory}, 'categoryItem']" v-for = "(item, index) in categoriesData" :key="index" @click="onCategoryClick(index)">
          <span> {{ item.name }} </span>
        </a>
     </div>
@@ -66,8 +66,43 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.categories{}
-.categories .active{
+.content{
+  position: relative;
+  left:0;
+  right:0;
+}
+.categories{
+  position: relative;
+  top: -50px;
+  left:0;
+  right:0;
+  height:100px;
+  margin:0 20px;
+  padding: 28px 24px 0;
+  background-color:#5adab1;
+  text-align: center;
+}
+.categories .categoryItem {
+  cursor:pointer;
+}
+.categories .categoryItem.active{
   color:red;
+}
+.projects{
+  position: relative;
+  left:0;
+  right:0;
+  margin:0 14px;
+  text-align: center;
+}
+.projectItem{
+  width:280px;
+  height:330px;
+  overflow: hidden;
+  display: inline-block;
+  /* margin-right: 10px;
+  margin-bottom: 10px; */
+  margin:10px;
+  background-color:#ffff00;
 }
 </style>

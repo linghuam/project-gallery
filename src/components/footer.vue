@@ -17,4 +17,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.footer{
+  position: relative;
+  left:0;
+  right:0;
+  margin:0 10px;
+  text-align: center;
+}
 </style>
