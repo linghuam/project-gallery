@@ -2,9 +2,7 @@
   <div class="content">
     <div class="categories">
        <a :class="[{active: index === currentCategory}, 'categoryItem']" v-for = "(item, index) in categoriesData" :key="index" @click="onCategoryClick(index)">
-         <!-- <i class="el-icon-edit"></i> -->
          <span> {{ item.name }} </span>
-         <!-- <div class="activeline"></div> -->
        </a>
     </div>
     <div class="projects">
@@ -13,7 +11,7 @@
           <div class="projectItem-name"> {{ item.name }} </div>
           <div class="projectItem-description">
             {{ item.description }}
-            <a class="projectItem-gotodetail" href="">详情...</a>
+            <a class="projectItem-gotodetail" :href="item.details">详情...</a>
           </div>
           <div class="projectItem-url">
             <a :href="item.demoUrl" target="_blank">在线演示</a>
@@ -25,7 +23,7 @@
 </template>
 
 <script>
-import {Categories, Projets} from '../assets/js/data'
+import { Categories, Projets } from '../assets/js/data';
 
 export default {
   name: 'myContent',
@@ -37,27 +35,27 @@ export default {
     };
   },
 
-  mounted(){
+  mounted() {
     this.categoriesData = Categories;
     this.currentCategory = 0;
   },
 
-  computed:{
-    projectsData(){
-      let category = Categories[this.currentCategory];
+  computed: {
+    projectsData() {
+      const category = Categories[this.currentCategory];
       return this.getProjectsByCategory(category.name);
     }
   },
 
-  methods:{
-     onCategoryClick(index){
-       this.currentCategory  = index;
+  methods: {
+     onCategoryClick(index) {
+       this.currentCategory = index;
      },
 
-     getProjectsByCategory(categoryName){
-       let temp = [];
-       for (let i = 0, len = Projets.length; i < len; i++){
-         if (categoryName === "All" || categoryName === Projets[i].category){
+     getProjectsByCategory(categoryName) {
+       const temp = [];
+       for (let i = 0, len = Projets.length; i < len; i++) {
+         if (categoryName === 'All' || categoryName === Projets[i].category) {
            temp.push(Projets[i]);
          }
        }
