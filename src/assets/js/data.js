@@ -16,7 +16,7 @@ const projects = [
   {
     category: 'Leaflet',
     name: '海上气象信息可视化',
-    description: '基于leaflet的海上气象信息可视化',
+    description: '基于 leaflet + canvas 实现的海上气象信息可视化',
     demoUrl: 'https://linghuam.github.io/ocean-weather/dist/',
     githubUrl: 'https://github.com/linghuam/ocean-weather',
     details: 'https://github.com/linghuam/ocean-weather' // string or object
@@ -24,15 +24,15 @@ const projects = [
   {
     category: 'Leaflet',
     name: '船舶轨迹回放',
-    description: '基于leaflet、canvas构建的船舶轨迹回放插件',
+    description: '基于 leaflet + canvas 构建的船舶轨迹回放插件',
     demoUrl: 'https://linghuam.github.io/TrackPlayback/',
     githubUrl: 'https://github.com/linghuam/TrackPlayback',
     details: 'https://github.com/linghuam/TrackPlayback' // string or object
   },
   {
     category: 'Visualization',
-    name: '基于echarts做的知识图谱',
-    description: 'echarts图表demo，有云图、折线图、柱状图、关系图、雷达图等',
+    name: 'echarts 知识图谱',
+    description: '基于 echarts 的图表 demo，有云图、折线图、柱状图、关系图、雷达图等',
     demoUrl: 'https://linghuam.github.io/echarts_demo/',
     githubUrl: 'https://github.com/linghuam/echarts_demo',
     details: 'https://github.com/linghuam/echarts_demo' // string or object
@@ -51,7 +51,7 @@ const projects = [
     description: '基于 socket.io 实现的在线聊天系统',
     demoUrl: '',
     githubUrl: 'https://github.com/linghuam/socket.io-chat',
-    details: 'https://github.com/linghuam/socket.io-chat' // string or object
+    details: 'https://github.com/linghuadm/socket.io-chat' // string or object
   },
   {
     category: 'Angularjs',
