@@ -14,8 +14,8 @@
             <a class="projectItem-gotodetail" :href="item.details">详情...</a>
           </div>
           <div class="projectItem-url">
-            <a :href="item.demoUrl" target="_blank">在线演示</a>
-            <a :href="item.githubUrl" target="_blank">Github</a>
+            <a v-if="item.demoUrl" :href="item.demoUrl" target="_blank">在线演示</a>
+            <a v-if="item.githubUrl" :href="item.githubUrl" target="_blank">Github</a>
           </div>
        </div>
     </div>
