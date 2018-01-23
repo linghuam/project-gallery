@@ -56,7 +56,7 @@ const projects = [
   {
     category: 'Angularjs',
     name: '移动端管线巡检系统',
-    description: `基于 Angularjs2 + ionic3 实现的管线巡检系统，
+    description: `基于 Angularjs2 + ionic3 实现的移动端管线巡检系统，
     包括地图展示、实时定位、区域上传、图层管理、任务管理、隐患点拍照上传等功能`,
     demoUrl: '',
     githubUrl: 'https://github.com/linghuam/ionicTest4',
@@ -120,6 +120,14 @@ const projects = [
     demoUrl: '',
     githubUrl: 'https://github.com/linghuam/getTileImg',
     details: 'https://github.com/linghuam/getTileImg' // string or object
+  },
+  {
+    category: 'Web3D',
+    name: 'threejs模仿微信跳一跳程序',
+    description: '用 threejs 模仿的一个简易的微信跳一跳程序',
+    demoUrl: 'https://linghuam.github.io/threejs-jump/index.html',
+    githubUrl: 'https://github.com/linghuam/threejs-jump',
+    details: 'https://github.com/linghuam/threejs-jump' // string or object
   }
 ];
 
